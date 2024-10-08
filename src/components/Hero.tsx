@@ -36,7 +36,7 @@ export const Hero = () => {
 								target="_blank"
 							></a>
 							<a
-								href="https://github.com/"
+								href="https://github.com/julianazacharias/subscriptions-website"
 								target="_blank"
 								className={`ml-8 w-full md:w-1/3 ${buttonVariants({
 									variant: "outline",

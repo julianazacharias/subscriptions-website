@@ -1,17 +1,45 @@
+# Subscriptions website
+
+## Technologies used:
+
+<div>
+    <a><img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white" target="_blank">
+    <a><img src="https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black" target="_blank">
+    <a><img src="https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=nextdotjs&logoColor=white" target="_blank">
+    <a><img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white" target="_blank">
+    <a><img src="https://img.shields.io/badge/Stripe-008CDD.svg?style=for-the-badge&logo=Stripe&logoColor=white" target="_blank">
+   </div>
+   <br/>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Prerequisites
 
-First, run the development server:
+Before you begin, ensure you have met the following requirements:
+
+- Node.js installed
+
+### Running the Development Server
+
+To start the development server, run:
+
+```bash
+npm install
+
+```
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+```
+
+### Building for Production
+
+To build the project for production, run:
+
+```bash
+npm run build
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -19,6 +47,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Credits
+
+- Tutorial: [As a Programmer](https://www.youtube.com/watch?v=R9PwoQwVpPQ&list=PLwRsZG_asExIPj1OtmARKCyuehyWJZW6s&index=3&t=4967s&ab_channel=AsaProgrammer)
 
 ## Learn More
 
