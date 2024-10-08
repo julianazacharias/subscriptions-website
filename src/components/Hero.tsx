@@ -46,10 +46,6 @@ export const Hero = () => {
 								Github Repository
 							</a>
 						</div>
-
-						{/* <a href=''>
-						<img src='https://made-with.prisma.io/dark.svg' width={220} height={130} alt='' />
-					</a> */}
 					</div>
 				</div>
 

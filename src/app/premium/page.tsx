@@ -1,6 +1,7 @@
 import prisma from "@/db/prisma";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { redirect } from "next/navigation";
+import Image from "next/image";
 
 const Page = async () => {
 	const { getUser } = getKindeServerSession();
@@ -18,10 +19,12 @@ const Page = async () => {
 				</span>
 			</h2>
 			<div className="z-10 overflow-hidden rounded-md">
-				<img
+				<Image
 					src="/whale.jpg"
+					width={986}
+					height={512}
 					alt="Premium Content"
-					className="w-1/2 mt-20 rounded-md transition-opacity duration-300 transform hover:opacity-75 mx-auto"
+					className="w-full mt-20 rounded-md transition-opacity duration-300 transform hover:opacity-75 mx-auto"
 				/>
 			</div>
 		</div>
