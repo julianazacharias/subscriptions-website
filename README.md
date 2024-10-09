@@ -1,5 +1,7 @@
 # Subscriptions website
 
+[Link to this project](https://subscriptions-website.vercel.app/)
+
 ## Technologies used:
 
 <div>
