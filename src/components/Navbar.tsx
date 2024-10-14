@@ -65,7 +65,7 @@ export const Navbar = () => {
 
 					<nav className="flex flex-col md:flex-row gap-2">
 						{/* Centralized links container */}
-						<div className="flex flex-wrap justify-center md:justify-start">
+						<div className="flex flex-wrap justify-center md:justify-start mr-10">
 							{routeList.map((route: RouteProps, i) => (
 								<Link
 									rel="noreferrer noopener"
