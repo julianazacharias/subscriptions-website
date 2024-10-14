@@ -63,81 +63,79 @@ export const Navbar = () => {
 						</a>
 					</NavigationMenuItem>
 
-					<nav className="md:flex gap-2">
-						{routeList.map((route: RouteProps, i) => (
-							<Link
-								rel="noreferrer noopener"
-								href={route.href}
-								key={i}
-								className={`text-[17px] ${buttonVariants({
-									variant: "ghost",
-								})}`}
-							>
-								{route.label}
-							</Link>
-						))}
-						{/* {isAuthenticated && isSubscribed && (
-							<Link
-								rel="noreferrer noopener"
-								href={process.env.NEXT_PUBLIC_STRIPE_CUSTOMER_PORTAL_URL!}
-								target="_blank"
-								className={`text-[17px] ${buttonVariants({
-									variant: "ghost",
-								})}`}
-							>
-								Billing Portal
-							</Link>
-						)} */}
-						{isAuthenticated && (
-							<Link
-								rel="noreferrer noopener"
-								href="/free"
-								className={`text-[17px] ${buttonVariants({
-									variant: "ghost",
-								})}`}
-							>
-								Free Content
-							</Link>
-						)}
-					</nav>
-					<div className="hidden md:flex gap-2">
-						{isAuthenticated && (
-							<Link
-								rel="noreferrer noopener"
-								href="/api/auth/logout"
-								className={`border ${buttonVariants({ variant: "secondary" })}`}
-							>
-								Logout
-								<LogOut className="w-4 h-4 ml-2" />
-							</Link>
-						)}
+					<nav className="flex flex-col md:flex-row gap-2">
+						{/* Centralized links container */}
+						<div className="flex flex-wrap justify-center md:justify-start">
+							{routeList.map((route: RouteProps, i) => (
+								<Link
+									rel="noreferrer noopener"
+									href={route.href}
+									key={i}
+									className={`text-[12px] md:text-[14px] ${buttonVariants({
+										variant: "ghost",
+									})}`}
+								>
+									{route.label}
+								</Link>
+							))}
 
-						{!isAuthenticated && (
-							<Link
-								rel="noreferrer noopener"
-								href="/api/auth/login"
-								className={`border ${buttonVariants({ variant: "secondary" })}`}
-							>
-								Login
-							</Link>
-						)}
+							{isAuthenticated && (
+								<Link
+									rel="noreferrer noopener"
+									href="/free"
+									className={`text-[12px] md:text-[14px] ${buttonVariants({
+										variant: "ghost",
+									})}`}
+								>
+									Free Content
+								</Link>
+							)}
+						</div>
 
-						{isAuthenticated && isSubscribed && (
-							<Link
-								rel="noreferrer noopener"
-								href="/premium"
-								className={`border bg-gradient-to-r from-[#66ea90] to-[#4b76a2] text-white ${buttonVariants(
-									{
+						{/* Fixed links for authentication and premium user */}
+						<div className="flex gap-2 md:gap-4">
+							{isAuthenticated && (
+								<Link
+									rel="noreferrer noopener"
+									href="/api/auth/logout"
+									className={`border ${buttonVariants({
 										variant: "secondary",
-									}
-								)}`}
-							>
-								Premium User 🌟
-							</Link>
-						)}
+									})} text-[12px] md:text-[14px]`}
+								>
+									Logout
+									<LogOut className="w-4 h-4 ml-2" />
+								</Link>
+							)}
+
+							{!isAuthenticated && (
+								<Link
+									rel="noreferrer noopener"
+									href="/api/auth/login"
+									className={`border ${buttonVariants({
+										variant: "secondary",
+									})} text-[12px] md:text-[14px]`}
+								>
+									Login
+								</Link>
+							)}
+
+							{isAuthenticated && isSubscribed && (
+								<Link
+									rel="noreferrer noopener"
+									href="/premium"
+									className={`border bg-gradient-to-r from-[#66ea90] to-[#4b76a2] text-white ${buttonVariants(
+										{
+											variant: "secondary",
+										}
+									)} text-[12px] md:text-[14px]`}
+								>
+									Premium User 🌟
+								</Link>
+							)}
+						</div>
 
 						<ModeToggle />
-					</div>
+					</nav>
 				</NavigationMenuList>
 			</NavigationMenu>
 		</header>
