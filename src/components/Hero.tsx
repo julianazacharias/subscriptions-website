@@ -87,6 +87,12 @@ export const Hero = () => {
 					</div>
 					<div className="flex items-center gap-1 px-8 py-2">
 						<img
+							src="https://img.shields.io/badge/MongoDB-47A248.svg?style=for-the-badge&logo=MongoDB&logoColor=white"
+							alt="logo"
+						/>
+					</div>
+					<div className="flex items-center gap-1 px-8 py-2">
+						<img
 							src="https://img.shields.io/badge/Stripe-008CDD.svg?style=for-the-badge&logo=Stripe&logoColor=white"
 							alt="logo"
 						/>
